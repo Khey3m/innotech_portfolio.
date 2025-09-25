@@ -1,0 +1,36 @@
+.hero {
+  height: 100vh; /* full screen height */
+  background: url('hero-bg.jpg') center/cover no-repeat; /* full-width background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.hero .btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.hero .btn:hover {
+  background: #0056b3;
+}
+
+h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  text-align: center;
+  font-style: sans-serif;
+  font-weight: bold;
+}
