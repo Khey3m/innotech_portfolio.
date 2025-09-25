@@ -1,16 +1,55 @@
 .hero {
-  height: 100vh; /* full screen height */
-  background: url('hero-bg.jpg') center/cover no-repeat; /* full-width background */
+  position: relative;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   color: white;
+  overflow: hidden;
+}
+
+.hero .bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 200vh;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 1;
+  pointer-events: none;
 }
 
 .hero-content {
-  max-width: 600px;
+  position: relative;
+  z-index: 1;
 }
+
+a {
+  font-style: italic;
+  text-align: left;
+
+}
+
+ul {
+  background: url('img/menu.png') center/cover no-repeat;
+}
+.navbar-brand {
+  color: aliceblue;
+}
+li {
+  color: #ffffff;
+}
+body {
+  background-color: rgb(190, 190, 182);
+  background: url('img/bg2.png');
+}
+
+.navbar {
+  background: url('img/menu.png') center/cover no-repeat;
+}
+
 
 .hero .btn {
   display: inline-block;
@@ -27,10 +66,94 @@
   background: #0056b3;
 }
 
+.services {
+  position: relative;
+  overflow: hidden;
+  min-height: 400px;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.services .bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 200%;
+  width: 100%;
+  height: 200%;
+  z-index: 0;
+  object-fit: cover;
+  opacity: 1;
+  pointer-events: none;
+}
+
+.services .container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1140px; /* Bootstrap container max width */
+  padding: 2rem 1rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.services h2 {
+  color: white;
+  margin-bottom: 40px;
+  font-size: 2.5em;
+  text-align: center;
+}
+.services .card {
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  transition: background 0.3s ease;
+}
+
+.services .card:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: translateY(-15px);
+}
+
 h1 {
   font-size: 3em;
   margin-bottom: 20px;
   text-align: center;
-  font-style: sans-serif;
-  font-weight: bold;
+  font-style: italic/sans-serif;
+  color: rgb(115, 236, 226);
+}
+
+
+.mb-3 {
+  color: #ffffff;
+}
+.mb-4 {
+  color: rgb(255, 255, 255);
+}
+
+.portfolio .card {
+  border: none;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.portfolio .card:hover {
+  transform: translateY(-10px);
+}
+.portfolio {
+  background-color: blanchedalmond;
+}
+.portfolio h2 {
+  color: #333;
+  margin-bottom: 40px;
+  font-size: 2.5em;
+  text-align: center;
 }
