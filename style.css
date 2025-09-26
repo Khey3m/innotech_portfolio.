@@ -65,17 +65,16 @@ body {
 .hero h1 {
   font-size: 3rem;
   margin-bottom: 20px;
-  color: #ffffff; /* pure white text */
+  color: #ffffff !important; /* force pure white */
   text-shadow: 2px 2px 8px rgba(0,0,0,0.8); /* glow for readability */
 }
 
 .hero p {
   font-size: 1.2rem;
   margin-bottom: 20px;
-  color: #f0f0f0; /* light grey text */
+  color: #ffffff !important; /* force pure white */
   text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
 }
-
 .hero .btn {
   background: #111;
   color: #fff;
