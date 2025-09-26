@@ -3,111 +3,156 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap Demo Webpage</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css"> <!-- para sa css -->
+    <title>INNOTECH Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-
-</head>
+  </head>
   <body>
-    <h1>
-  <img src="img/logo.png" alt="Logo" style="height: 50px; vertical-align: middle; margin-right: 12px;">INNOTECH WEBSITE</h1>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+      <a class="navbar-brand" href="#">INNOTECH</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero Section with Video -->
+    <section class="hero">
+      <video class="bg-video" autoplay loop muted playsinline>
+        <source src="img/oh.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="hero-content">
+        <h1>Your Success, Our Mission</h1>
+        <p>We provide innovative solutions to help your business grow faster.</p>
+        <a href="#services" class="btn">Get Started</a>
+      </div>
+    </section>
+
+    <!-- Services Section (no video, clean white cards) -->
+    <section id="services" class="services py-5">
+      <div class="container">
+        <h2 class="text-center mb-4">Our Services</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body text-center">
+                <h5 class="card-title">Web Development</h5>
+                <p class="card-text">We build fast, responsive, and modern websites tailored to your needs.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body text-center">
+                <h5 class="card-title">Mobile Apps</h5>
+                <p class="card-text">Custom iOS and Android apps that help you reach users on the go.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body text-center">
+                <h5 class="card-title">Digital Marketing</h5>
+                <p class="card-text">Boost your online presence with SEO, social media, and targeted ads.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio py-5">
+      <div class="container">
+        <h2 class="text-center mb-4">Our Portfolio</h2>
+        <div class="row g-4">
+          <!-- keep your project cards here -->
+          <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card h-100">
+              <img src="img/pr1.png" class="card-img-top img-fluid" alt="Project 1">
+              <div class="card-body text-center">
+                <p class="card-text">E-commerce Website</p>
+              </div>
+            </div>
+          </div>
+          <!-- repeat for other projects -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact py-5">
+      <div class="container">
+        <h2 class="text-center mb-4">Contact Us</h2>
+        <div class="row justify-content-center">
+          <div class="col-md-8 col-lg-6">
+            <form class="needs-validation" novalidate>
+              <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" required>
+                <div class="invalid-feedback">Please enter your name.</div>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" required>
+                <div class="invalid-feedback">Please enter a valid email.</div>
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" rows="5" required></textarea>
+                <div class="invalid-feedback">Please enter your message.</div>
+              </div>
+              <div class="d-grid">
+                <button type="submit" class="btn btn-primary">Send Message</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer text-white py-4">
+      <div class="container text-center">
+        <div class="mb-3">
+          <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="text-white me-3"><i class="bi bi-twitter"></i></a>
+          <a href="#" class="text-white me-3"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="text-white"><i class="bi bi-linkedin"></i></a>
+        </div>
+        <p class="mb-0">&copy; 2025 INNOTECH. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Bootstrap validation
+      (function () {
+        'use strict'
+        const forms = document.querySelectorAll('.needs-validation')
+        Array.from(forms).forEach(function (form) {
+          form.addEventListener('submit', function (event) {
+            if (!form.checkValidity()) {
+              event.preventDefault()
+              event.stopPropagation()
+            }
+            form.classList.add('was-validated')
+          }, false)
+        })
+      })()
+    </script>
   </body>
-
-
-    <!-- Responsive Navbar -->
-<nav class="navbar navbar-expand-lg">
-  <a class="navbar-brand" href="#">Welcome to INNOTECH</a> 
-  <!-- Toggler button (appears on small screens) -->
-  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <!-- Collapsible menu -->
-  <div class="collapse navbar-collapse" id="navbarMenu">
-    <ul class="navbar-n av ms-auto">
-      <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-      <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-      <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
-      <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-    </ul>
-  </div>
-</nav>
-
-
-<section class="hero">
-  <div class="hero-content">
-    <h1>Your Success, Our Mission</h1>
-    <p>We provide innovative solutions to help your business grow faster.</p>
-    <a href="#services" class="btn">Get Started</a>
-  </div>
-</section>
-
-<section class="services py-5">
-  <div class="container">
-    <video class="bg-video" autoplay loop muted playsinline>
-    <source src="img/bf.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-    <h2 class="text-center mb-4">Our Services</h2>
-    <div class="row g-4">
-      
-      <!-- Service 1 -->
-      <div class="col-md-4">
-        <div class="card h-100 shadow-sm">
-          <div class="card-body text-center">
-            <h5 class="card-title">Web Development</h5>
-            <p class="card-text">We build fast, responsive, and modern websites tailored to your needs.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Service 2 -->
-      <div class="col-md-4">
-        <div class="card h-100 shadow-sm">
-          <div class="card-body text-center">
-            <h5 class="card-title">Mobile Apps</h5>
-            <p class="card-text">Custom iOS and Android apps that help you reach users on the go.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Service 3 -->
-      <div class="col-md-4">
-        <div class="card h-100 shadow-sm">
-          <div class="card-body text-center">
-            <h5 class="card-title">Digital Marketing</h5>
-            <p class="card-text">Boost your online presence with SEO, social media, and targeted ads.</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-
-
-<section class="portfolio py-5">
-  <div class="container">
-    <h2 class="text-center mb-4">Our Portfolio</h2>
-    <div class="row g-4">
-
-      <!-- Project 1 -->
-      <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="card h-100">
-          <img src="img/pr1.png" class="card-img-top img-fluid" alt="Project 1">
-          <div class="card-body text-center">
-            <p class="card-text">E-commerce Website</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project 2 -->
-      <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="card h-100">
-          <img src="img/pr2.png" class="card-img-top img-fluid" alt="Project 2">
+</html>          <img src="img/pr2.png" class="card-img-top img-fluid" alt="Project 2">
           <div class="card-body text-center">
             <p class="card-text">Mobile App UI</p>
           </div>
