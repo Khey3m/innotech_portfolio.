@@ -110,25 +110,26 @@ body {
 }
 
 /* Portfolio */
+/* Portfolio Section */
 .portfolio {
-  background: #111;   /* black background */
+  background-color: #000 !important; /* pure black */
   padding: 80px 20px;
-  color: #f5f5f5;     /* light text for readability */
+  color: #fff !important; /* force white text */
 }
 
 .portfolio h2 {
   margin-bottom: 40px;
   text-align: center;
-  color: #fff;        /* white heading */
+  color: #fff !important; /* force white heading */
 }
 
 .portfolio .card {
-  background: #1a1a1a;   /* dark grey card */
+  background: #111; /* very dark grey cards */
   border: 1px solid #333;
   border-radius: 12px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
-  color: #f0f0f0;    /* card text color */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #f5f5f5;
 }
 
 .portfolio .card img {
@@ -137,11 +138,11 @@ body {
 
 .portfolio .card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 8px 20px rgba(255,255,255,0.1);
+  box-shadow: 0 8px 20px rgba(255,255,255,0.2);
 }
 
 .portfolio .card .card-text {
-  color: #ccc;       /* softer grey for card text */
+  color: #ddd;
 }
 
 /* Contact Form */
