@@ -55,9 +55,11 @@ body {
 /* Hero Section */
 
 /* Hero Section */
+
+/* Hero Section */
 .hero {
   position: relative;
-  height: 100vh; /* full screen */
+  min-height: 100vh;  /* at least the full phone screen height */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -65,31 +67,37 @@ body {
   overflow: hidden;
 }
 
+/* Fullscreen Video */
 .hero video {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  z-index: -2; /* video stays at the back */
+  object-fit: cover;     /* fill screen like background-size: cover */
+  object-position: center;
+  z-index: -2;           /* stay behind overlay & text */
 }
 
+/* Dark Overlay */
 .hero::before {
   content: "";
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: rgba(0,0,0,0.65); /* dark overlay */
-  z-index: -1; /* overlay above video but below text */
+  background: rgba(0,0,0,0.65);
+  z-index: -1;
 }
 
+/* Hero Text */
 .hero-content {
   position: relative;
-  z-index: 2; /* text always on top */
+  z-index: 2;
   max-width: 700px;
+  margin: 0 auto;
   padding: 0 15px;
 }
+
 
 .hero h1 {
   font-size: 3rem;
