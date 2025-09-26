@@ -58,15 +58,18 @@ body {
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.7); /* darker overlay */
+  background: rgba(0,0,0,0.75); /* darker overlay */
   z-index: -1;
 }
 
 .hero h1 {
   font-size: 3rem;
   margin-bottom: 20px;
-  color: #ffffff !important; /* force pure white */
-  text-shadow: 2px 2px 8px rgba(0,0,0,0.8); /* glow for readability */
+  color: #ffffff !important;  /* force white */
+  font-weight: 700;
+  text-shadow: 3px 3px 10px rgba(0,0,0,0.9); /* strong shadow */
+  position: relative;
+  z-index: 2; /* stay above overlay */
 }
 
 .hero p {
